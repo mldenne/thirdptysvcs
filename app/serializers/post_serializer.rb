@@ -1,7 +1,12 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :caption, :image
+  attributes :id, :caption, :image, :created_at
 
   def image
     Refile.attachment_url(object, :image)
   end
+
+  def created_at
+    Faker::Time.between(DateTime.now - 1, DateTime.now)
+  end
+
 end

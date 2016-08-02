@@ -26,6 +26,7 @@ gem 'griddler-sendgrid'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'pusher'
 gem 'kramdown'
+gem 'faker'
 
 gem "rack-protection", :github => "sinatra/rack-protection"
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
