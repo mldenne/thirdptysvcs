@@ -6,7 +6,7 @@ class PostSerializer < ActiveModel::Serializer
   end
 
   def created_at
-    Faker::Time.between(DateTime.now - 1, DateTime.now)
+    Faker::Date.backward(365)
   end
 
 end
