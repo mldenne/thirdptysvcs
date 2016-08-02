@@ -1,3 +1,38 @@
+GIT
+  remote: git://github.com/refile/refile-mini_magick.git
+  revision: 9c74f7b61c794837a02af3f21d1be96286b7ce4d
+  specs:
+    refile-mini_magick (0.2.0)
+      mini_magick (~> 4.0)
+      refile (~> 0.5)
+
+GIT
+  remote: git://github.com/refile/refile.git
+  revision: d7a42dcd7cf631ba94b01231f535bda061f6af92
+  specs:
+    refile (0.6.2)
+      mime-types
+      rest-client (~> 1.8)
+      sinatra (>= 1.4.5)
+
+GIT
+  remote: git://github.com/sinatra/rack-protection.git
+  revision: 7e723a74763bb83989d1249cdceb9cceb2ee6f01
+  specs:
+    rack-protection (2.0.0)
+      rack
+
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: 92a82e47459b1ed7dcd484866777ad9a79e0c586
+  branch: master
+  specs:
+    sinatra (2.0.0.pre.alpha)
+      mustermann (~> 0.4)
+      rack (~> 2.0)
+      rack-protection (~> 2.0)
+      tilt (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,6 +82,8 @@ GEM
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
+    domain_name (0.5.20160615)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     ffi (1.9.14)
     figaro (1.1.1)
@@ -59,6 +96,8 @@ GEM
     griddler-sendgrid (0.0.1)
       griddler
     htmlentities (4.3.4)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     httpclient (2.8.0)
     i18n (0.7.0)
     json (1.8.3)
@@ -73,12 +112,14 @@ GEM
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
+    mime-types (2.99.2)
+    mini_magick (4.5.1)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    mustermann (0.4.0)
+      tool (~> 0.2)
+    netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -122,6 +163,13 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    refile-postgres (1.4.0)
+      pg
+      refile (~> 0.6.2)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -135,8 +183,13 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
+    tilt (2.0.5)
+    tool (0.2.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -156,7 +209,12 @@ DEPENDENCIES
   puma (~> 3.0)
   pusher
   rack-cors
+  rack-protection!
   rails (~> 5.0.0)
+  refile!
+  refile-mini_magick!
+  refile-postgres (~> 1.4)
+  sinatra!
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
